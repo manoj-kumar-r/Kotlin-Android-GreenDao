@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Demo</string>
+    <string name="name">Name</string>
+    <string name="age">Age</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="fe_male">Fe-Male</string>
+    <string name="select">Select</string>
+    <string name="emp_type">Employee Type</string>
+    <string name="department">Department</string>
+    <string name="save_text">Save</string>
+    <string name="submit">Cancel</string>
+    <string name="information">IT</string>
+    <string name="network">Network</string>
+    <string name="development">Development</string>
+    <string name="hr">HR</string>
+    <string name="manager">Manager</string>
+    <string name="employee">Employee</string>
+    <string name="dummy_text">Dt</string>
+</resources>

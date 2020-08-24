@@ -1,0 +1,56 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'org.greenrobot.greendao'
+android {
+    compileSdkVersion ANDROID_TARGET_SDK
+    buildToolsVersion BUILD_TOOL_VERSION
+
+    defaultConfig {
+        minSdkVersion ANDROID_MIN_SDK
+        targetSdkVersion ANDROID_TARGET_SDK
+        versionCode VERSION_CODE
+        versionName VERSION_NAME
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    compileOptions {
+        sourceCompatibility SOURCE_COMPATABLE
+        targetCompatibility TARGET_COMPATABLE
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //Database
+    implementation 'net.zetetic:android-database-sqlcipher:4.4.0'
+
+    //green dao
+    implementation 'org.greenrobot:greendao:3.3.0'
+
+    //gson
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    //kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$KOTLIN_VERSION"
+    implementation "androidx.core:core-ktx:$KOTLIN_KTX_VERSION"
+}
+greendao {
+    schemaVersion 1
+}
+repositories {
+    mavenCentral()
+}

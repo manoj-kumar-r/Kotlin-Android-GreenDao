@@ -1,0 +1,3 @@
+include ':greenDaolibrary'
+include ':app'
+rootProject.name = "Demo"
